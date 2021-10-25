@@ -6,6 +6,20 @@ Classe Robot
 """
 class Robot:
 
+    dict_direction_droit = {
+        'Est': 'Sud',
+        'Ouest': 'Nord',
+        'Nord': 'Est',
+        'Sud': 'Ouest'
+    }
+
+    dict_direction_gauche = {
+        'Est': 'Nord',
+        'Ouest': 'Sud',
+        'Nord': 'Ouest',
+        'Sud': 'Est'
+    }
+
     """
     Constructeur de la classe
     @param nom : nom du robot
@@ -43,27 +57,14 @@ class Robot:
     Méthode permettant au robot de tourner à droite
     """
     def droite(self):
-        if self.__direction == "Est":
-            self.setDirection("Sud")
-        elif self.__direction == "Ouest":
-            self.setDirection("Nord")
-        elif self.__direction == "Nord":
-            self.setDirection("Est")
-        else:
-            self.setDirection("Ouest")
+        self.setDirection(self.__class__.dict_direction_droit[self.__direction])
 
     """
     Méthode permettant au robot de tourner à gauche
     """
     def gauche(self):
-        if self.__direction == "Est":
-            self.setDirection("Nord")
-        elif self.__direction == "Ouest":
-            self.setDirection("Sud")
-        elif self.__direction == "Nord":
-            self.setDirection("Ouest")
-        else:
-            self.setDirection("Est")
+        global dict_direction_gauche
+        self.setDirection(self.__class__.dict_direction_gauche[self.__direction])
 
     """
     Méthode permettant d'afficher l'état du robot
