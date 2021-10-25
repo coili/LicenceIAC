@@ -1,3 +1,5 @@
+# coding: utf-8
+
 """
 Classe CompteBancaire
 @author : Colin Senot

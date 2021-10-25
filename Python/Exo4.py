@@ -1,3 +1,5 @@
+# coding: utf-8
+
 import math
 from Exo3 import Point
 
