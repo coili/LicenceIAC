@@ -63,7 +63,6 @@ class Robot:
     Méthode permettant au robot de tourner à gauche
     """
     def gauche(self):
-        global dict_direction_gauche
         self.setDirection(self.__class__.dict_direction_gauche[self.__direction])
 
     """
