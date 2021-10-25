@@ -51,7 +51,12 @@ class Rectangle:
         print("Surface du rectangle : ", self.surface())
 
 
-    
+
+"""
+=================
+Mise en situation
+=================
+"""    
     
 rectangle_1 = Rectangle(20, 10)
 rectangle_1.afficher()
