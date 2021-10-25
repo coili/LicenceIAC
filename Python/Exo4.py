@@ -1,5 +1,5 @@
 import math
-from Ex3 import Point
+from Exo3 import Point
 
 """
 Classe Cercle
