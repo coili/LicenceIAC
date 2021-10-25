@@ -12,22 +12,22 @@ class Point:
     @param y : coordonnée Y du point (par défaut, 0)
     """
     def __init__(self, x=0, y=0):
-        self.x = x
-        self.y = y
+        self.__x = x
+        self.__y = y
     
     """
     Getter de l'attribut x
     @return x : coordonnée X du point
     """
     def getX(self):
-        return self.x
+        return self.__x
 
     """
     Getter de l'attribut y
     @return y : coordonnée Y du point
     """
     def getY(self):
-        return self.y
+        return self.__y
 
     """
     Méthode permettant de calculer la distance, entre deux points
@@ -38,7 +38,7 @@ class Point:
         point_x = Point.getX()
         point_y = Point.getY()
 
-        distance = math.sqrt(pow((point_x - self.x), 2) + pow((point_y - self.y), 2))
+        distance = math.sqrt(pow((point_x - self.__x), 2) + pow((point_y - self.__y), 2))
 
         return round(distance, 3)
         
