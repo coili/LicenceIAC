@@ -12,14 +12,12 @@ class Rectangle:
         self.longueur = longueur
         self.largeur = largeur
 
-
     """
     Setter de l'attribut longueur
     @param longueur : nouvelle longueur
     """
     def setLongueur(self, longueur):
         self.longueur = longueur
-        
 
     """
     Setter de l'attribut largeur
