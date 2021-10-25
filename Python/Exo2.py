@@ -1,7 +1,6 @@
 """
 Classe Rectangle
 @author : Colin Senot
-
 """
 class Rectangle:
 
