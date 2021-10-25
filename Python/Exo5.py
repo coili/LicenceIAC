@@ -6,6 +6,7 @@ Classe Robot
 """
 class Robot:
 
+    # Dictionnaire correspondant à la nouvelle direction, lors d'un virage à droite 
     dict_direction_droit = {
         'Est': 'Sud',
         'Ouest': 'Nord',
@@ -13,6 +14,7 @@ class Robot:
         'Sud': 'Ouest'
     }
 
+    # Dictionnaire correspondant à la nouvelle direction, lors d'un virage à gauche
     dict_direction_gauche = {
         'Est': 'Nord',
         'Ouest': 'Sud',
