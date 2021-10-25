@@ -53,6 +53,7 @@ class Cercle:
 Mise en situation
 =================
 """
+
 A = Point(4, -2)
 cercle_1 = Cercle(A, 2)
 
@@ -66,7 +67,7 @@ if cercle_1.testAppartenance(B):
 else:
     print("Le point B n'appartient pas au cercle.")
 
-C = Point(4, 4)
+C = point(4, 4)
 
 if cercle_1.testAppartenance(C):
     print("Le point C appartient au cercle.")
