@@ -66,7 +66,7 @@ if cercle_1.testAppartenance(B):
 else:
     print("Le point B n'appartient pas au cercle.")
 
-C = point(4, 4)
+C = Point(4, 4)
 
 if cercle_1.testAppartenance(C):
     print("Le point C appartient au cercle.")
