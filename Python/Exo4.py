@@ -13,15 +13,15 @@ class Cercle:
     @param r : rayon du cercle
     """
     def __init__(self, Point, r):
-        self.centre = Point
-        self.rayon = r
+        self.__centre = Point
+        self.__rayon = r
 
     """
     Méthode permettant d'obtenir le périmètre du cercle
     @return result : périmètre du cercle
     """
     def perimetre(self):
-        result = 2 * math.pi * self.rayon
+        result = 2 * math.pi * self.__rayon
         return round(result, 2)
 
     """
@@ -29,7 +29,7 @@ class Cercle:
     @return result : surface du cercle
     """
     def surface(self):
-        result = math.pi * pow(self.rayon, 2)
+        result = math.pi * pow(self.__rayon, 2)
         return round(result, 2) 
 
     """
@@ -39,9 +39,9 @@ class Cercle:
     """
     def testAppartenance(self, Point):
         result = False
-        distance = round(self.centre.distance(Point), 1)
+        distance = round(self.__centre.distance(Point), 1)
 
-        if distance == self.rayon:
+        if distance == self.__rayon:
             result = True
         
         return result
