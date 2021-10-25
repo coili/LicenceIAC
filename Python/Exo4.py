@@ -11,10 +11,12 @@ class Cercle:
 
     """
     Constructeur de la classe
+    @param nom : nom du cercle
     @param Point : centre du cercle
     @param r : rayon du cercle
     """
-    def __init__(self, Point, r):
+    def __init__(self, nom, Point, r):
+        self.__nom = nom
         self.__centre = Point
         self.__rayon = r
 
@@ -48,6 +50,12 @@ class Cercle:
         
         return result
         
+    
+    def __repr__(self):
+        affichage = "Informations concernant le cercle " + self.__nom + "\n"
+        affichage += "- Centre : \n" + str(self.__centre) + "\n"
+        affichage += "- Rayon : " + str(self.__rayon) + "\n"
+        return affichage
 
 
 """
@@ -56,22 +64,26 @@ Mise en situation
 =================
 """
 
-A = Point(4, -2)
-cercle_1 = Cercle(A, 2)
+E = Point("E", -2, 1)
+F = Point("F", 3, 1)
+O = Point("O", 0, 0)
 
-print("Périmètre du cercle : ", cercle_1.perimetre())
-print("Surface du cercle : ", cercle_1.surface())
+cercle = Cercle("C", E, 5)
 
-B = Point(2, -2)
+print(cercle)
 
-if cercle_1.testAppartenance(B):
-    print("Le point B appartient au cercle.")
+perimetre = "Perimetre du cercle : " + str(cercle.perimetre())
+surface = "Surface du cercle : " + str(cercle.surface())
+
+print(perimetre)
+print(surface)
+
+if cercle.testAppartenance(F):
+    print("Le point F appartient au cercle.")
 else:
-    print("Le point B n'appartient pas au cercle.")
+    print("Le point F n'appartient pas au cercle.")
 
-C = Point(4, 4)
-
-if cercle_1.testAppartenance(C):
-    print("Le point C appartient au cercle.")
+if cercle.testAppartenance(O):
+    print("Le point O appartient au cercle.")
 else:
-    print("Le point C n'appartient pas au cercle.")
+    print("Le point O n'appartient pas au cercle.")

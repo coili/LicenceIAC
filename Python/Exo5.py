@@ -67,13 +67,14 @@ class Robot:
 
     """
     Méthode permettant d'afficher l'état du robot
+    @return affichage : affichage de l'état du robot
     """
-    def afficheEtat(self):
-        print("Nom : ", self.__nom)
-        print("Position X : ", self.__x)
-        print("Position Y : ", self.__y)
-        print("Direction : ", self.__direction)
-
+    def __repr__(self):
+        affichage = "Etat du robot " + self.__nom + " : \n" 
+        affichage += "- Abscisse : " + str(self.__x) + "\n"
+        affichage += "- Ordonnée : " + str(self.__y) + "\n"
+        affichage += "- Orientation : " + self.__direction + "\n"
+        return affichage
 
 
 """
@@ -82,15 +83,19 @@ Mise en situation
 =================
 """
 
-robot = Robot("R2D2")
+robot = Robot("Asimo", 7, -2)
+
+robot.avance()
+robot.avance() 
+robot.avance()  
+
+robot.gauche()
+
+robot.avance() 
 robot.avance() 
 
 robot.droite()
-robot.droite()
 
 robot.avance()
 
-robot.gauche()
-robot.avance()
-
-robot.afficheEtat()
+print(robot)

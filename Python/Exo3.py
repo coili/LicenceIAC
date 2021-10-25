@@ -10,10 +10,12 @@ class Point:
 
     """
     Constructeur de la classe
+    @param nom : nom du point
     @param x : coordonnée X du point (par défaut, 0)
     @param y : coordonnée Y du point (par défaut, 0)
     """
-    def __init__(self, x=0, y=0):
+    def __init__(self, nom, x=0, y=0):
+        self.__nom = nom
         self.__x = x
         self.__y = y
     
@@ -43,6 +45,16 @@ class Point:
         distance = math.sqrt(pow((point_x - self.__x), 2) + pow((point_y - self.__y), 2))
 
         return round(distance, 3)
+
+    """
+    Méthode permettant l'affichage des informations d'un point
+    @return affichage : affiche les informations du point
+    """
+    def __repr__(self):
+        affichage = "Informations concernant le point " + self.__nom + "\n"
+        affichage += "- Abscisse : " + str(self.__x) + "\n"
+        affichage += "- Ordonnée : " + str(self.__y) + "\n"
+        return affichage
         
 
 
@@ -52,7 +64,7 @@ Mise en situation
 =================
 """
 
-A = Point(2, 3)
-B = Point(4, 1)
+A = Point("A", 2, 3)
+B = Point("B", 4, 1)
 
 print("Distance entre le point A et le point B : ", A.distance(B))
