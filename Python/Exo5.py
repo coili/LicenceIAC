@@ -2,7 +2,7 @@
 
 """
 Classe Robot
-@author Colin Senot
+@author Colin Seno
 """
 class Robot:
 
