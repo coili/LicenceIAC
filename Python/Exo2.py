@@ -10,29 +10,29 @@ class Rectangle:
     @param largeur : correspond à la largeur du rectangle
     """
     def __init__(self, longueur, largeur):
-        self.longueur = longueur
-        self.largeur = largeur
+        self.__longueur = longueur
+        self.__largeur = largeur
 
     """
     Setter de l'attribut longueur
     @param longueur : nouvelle longueur
     """
     def setLongueur(self, longueur):
-        self.longueur = longueur
+        self.__longueur = longueur
 
     """
     Setter de l'attribut largeur
     @param largeur : nouvelle largeur
     """
     def setLargeur(self, largeur):
-        self.largeur = largeur
+        self.__largeur = largeur
 
     """
     Méthode perimetre : permet de calculer le perimetre du rectangle
     @return result : correspond au périmètre du rectanlge
     """
     def perimetre(self):
-        result = (self.longueur * 2) + (self.largeur * 2)
+        result = (self.__longueur * 2) + (self.__largeur * 2)
         return result
 
     """
@@ -40,14 +40,14 @@ class Rectangle:
     @return result : correspond à la surface du rectanlge
     """
     def surface(self):
-        result = self.longueur * self.largeur
+        result = self.__longueur * self.__largeur
         return result
 
     """
     Méthode afficher : affiche les caractéristiques du rectangle
     """
     def afficher(self):
-        print("Rectangle de longueur ", self.longueur, " et de largeur ", self.largeur)
+        print("Rectangle de longueur ", self.__longueur, " et de largeur ", self.__largeur)
         print("Périmètre du rectangle : ", self.perimetre())
         print("Surface du rectangle : ", self.surface())
 
