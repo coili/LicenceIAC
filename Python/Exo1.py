@@ -1,6 +1,7 @@
 """
 Classe CompteBancaire
 @author : Colin Senot
+
 """
 class CompteBancaire:
 
