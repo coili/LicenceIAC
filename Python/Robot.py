@@ -116,6 +116,7 @@ class Robot:
             self.__ordonnee += 1
         else:
             self.__ordonnee -= 1
+        
 
     """
     Méthode permettant au robot de tourner à droite
