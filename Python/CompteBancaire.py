@@ -110,7 +110,8 @@ class CompteBancaire:
         affichage += "- Découvert autorisé : " + str(self.__decouvert) + "\n"
         return affichage
 
-    
+
+    # Définitions des propriétés
     nom = property(getNom, setNom)
     numero = property(getNumero, setNumero)
     solde = property(getSolde, setSolde)

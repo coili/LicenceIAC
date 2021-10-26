@@ -111,10 +111,11 @@ class Cercle:
         return affichage
 
 
+    # Définitions des propriétés
     nom = property(setNom, getNom)
     centre = property(setCentre, getCentre)
     rayon = property(setRayon, getRayon)
-    
+
 
 """
 =================

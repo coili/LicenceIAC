@@ -94,10 +94,11 @@ class Point:
         return affichage
         
     
+    # Définitions des propriétés
     nom = property(setNom, getNom)
     abscisse = property(setAbscisse, getAbscisse)
     ordonnee = property(setOrdonnee, getOrdonnee)
-    
+
 
 """
 =================

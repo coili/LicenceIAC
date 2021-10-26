@@ -137,11 +137,12 @@ class Robot:
         return affichage
 
 
+    # Définitions des propriétés
     nom = property(getNom, setNom)
     abscisse = property(getAbscisse, setAbscisse)
     ordonnee = property(getOrdonnee, setOrdonnee)
     direction = property(getDirection, setDirection)
-    
+
 
 """
 =================
