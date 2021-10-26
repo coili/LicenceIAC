@@ -76,8 +76,8 @@ class Point:
     @return distance : distance entre deux points (instance et paramètre)
     """
     def distance(self, Point):
-        point_x = Point.getX()
-        point_y = Point.getY()
+        point_x = Point.getAbscisse()
+        point_y = Point.getOrdonnee()
 
         distance = math.sqrt(pow((point_x - self.__abscisse), 2) + pow((point_y - self.__ordonnee), 2))
 

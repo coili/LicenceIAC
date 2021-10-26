@@ -17,7 +17,7 @@ class Cercle:
     """
     def __init__(self, nom, centre, r):
         assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
-        assert isinstance(centre, (int, float)), "Le centre doit etre un nombre."
+        assert isinstance(centre, Point), "Le centre doit etre un point."
         assert isinstance(r, (int, float)), "Le rayon doit etre un nombre."
 
         self.__nom = nom
@@ -45,7 +45,7 @@ class Cercle:
     @param centre : nouveau centre
     """
     def setCentre(self, centre):
-        assert isinstance(centre, (int, float)), "Le centre doit etre un nombre."
+        assert isinstance(centre, Point), "Le centre doit etre un point."
         self.__centre = centre
     
     """
