@@ -1,8 +1,8 @@
 class Rectangle:
 
-    def __init__(self, longueur, largeur):
-        self.__longueur = longueur
-        self.__largeur = largeur
+    def __init__(self, longueurRectangle, largeurRectangle):
+        self.__longueur = longueurRectangle
+        self.__largeur = largeurRectangle
 
 
     """
@@ -14,11 +14,11 @@ class Rectangle:
     def getLargeur(self):
         return self.__largeur
 
-    def setLongueur(self, longueur):
-        self.__longueur = longueur
+    def setLongueur(self, longueurRectangle):
+        self.__longueur = longueurRectangle
     
-    def setLargeur(self, largeur):
-        self.__largeur = largeur
+    def setLargeur(self, largeurRectangle):
+        self.__largeur = largeurRectangle
 
     
     longueur = property(getLongueur, setLongueur)

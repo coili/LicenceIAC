@@ -12,12 +12,12 @@ class Cercle:
     """
     Constructeur de la classe
     @param nom : nom du cercle
-    @param Point : centre du cercle
+    @param centre : centre du cercle, de type Point
     @param r : rayon du cercle
     """
-    def __init__(self, nom, Point, r):
+    def __init__(self, nom, centre, r):
         self.__nom = nom
-        self.__centre = Point
+        self.__centre = centre
         self.__rayon = r
 
     """
