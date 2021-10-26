@@ -50,7 +50,10 @@ class Cercle:
         
         return result
         
-    
+    """
+    Méthode permettant l'affichage des informations du cercle
+    @return affichage : affiche les informations du cercle
+    """
     def __repr__(self):
         affichage = "Informations concernant le cercle " + self.__nom + "\n"
         affichage += "- Centre : \n" + str(self.__centre) + "\n"
