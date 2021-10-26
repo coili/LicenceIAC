@@ -116,33 +116,3 @@ class Cercle:
     centre = property(setCentre, getCentre)
     rayon = property(setRayon, getRayon)
 
-
-"""
-=================
-Mise en situation
-=================
-"""
-
-E = Point("E", -2, 1)
-F = Point("F", 3, 1)
-O = Point("O", 0, 0)
-
-cercle = Cercle("C", E, 5)
-
-print(cercle)
-
-perimetre = "Perimetre du cercle : " + str(cercle.perimetre())
-surface = "Surface du cercle : " + str(cercle.surface())
-
-print(perimetre)
-print(surface)
-
-if cercle.testAppartenance(F):
-    print("Le point F appartient au cercle.")
-else:
-    print("Le point F n'appartient pas au cercle.")
-
-if cercle.testAppartenance(O):
-    print("Le point O appartient au cercle.")
-else:
-    print("Le point O n'appartient pas au cercle.")

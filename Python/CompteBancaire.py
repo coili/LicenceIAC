@@ -118,19 +118,3 @@ class CompteBancaire:
     decouvert = property(getDecouvert, setDecouvert)
 
 
-"""
-=================
-Mise en situation
-=================
-"""
-
-compte = CompteBancaire("120500045860", "Jeannot", 1000, True)
-
-compte.debit(450)
-compte.credit(200)
-
-print(compte)
-
-compte.debit(800)
-
-print(compte)

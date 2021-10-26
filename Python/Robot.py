@@ -142,27 +142,3 @@ class Robot:
     abscisse = property(getAbscisse, setAbscisse)
     ordonnee = property(getOrdonnee, setOrdonnee)
     direction = property(getDirection, setDirection)
-
-
-"""
-=================
-Mise en situation
-=================
-"""
-
-robot = Robot("Asimo", 7, -2)
-
-robot.avance()
-robot.avance() 
-robot.avance()  
-
-robot.gauche()
-
-robot.avance() 
-robot.avance() 
-
-robot.droite()
-
-robot.avance()
-
-print(robot)

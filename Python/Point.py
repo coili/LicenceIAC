@@ -98,15 +98,3 @@ class Point:
     nom = property(setNom, getNom)
     abscisse = property(setAbscisse, getAbscisse)
     ordonnee = property(setOrdonnee, getOrdonnee)
-
-
-"""
-=================
-Mise en situation
-=================
-"""
-
-A = Point("A", 2, 3)
-B = Point("B", 4, 1)
-
-print("Distance entre le point A et le point B : ", A.distance(B))
