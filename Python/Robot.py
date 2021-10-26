@@ -134,7 +134,7 @@ class Robot:
 
 
     # Définitions des propriétés
-    nom = property(getNom, setNom)
+    nom = property(getNom)
     abscisse = property(getAbscisse, setAbscisse)
     ordonnee = property(getOrdonnee, setOrdonnee)
     direction = property(getDirection, setDirection)
