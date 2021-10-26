@@ -23,15 +23,7 @@ class Cercle:
         self.__nom = nom
         self.__centre = centre
         self.__rayon = r
-
-
-    """
-    Setter de l'attribut nom
-    @param nom : nouveau nom
-    """
-    def setNom(self, nom):
-        assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
-        self.__nom = nom    
+ 
 
     """
     Getter de l'attribut nom
@@ -39,14 +31,6 @@ class Cercle:
     """
     def getNom(self):
         return self.__nom
-
-    """
-    Setter de l'attribut centre
-    @param centre : nouveau centre
-    """
-    def setCentre(self, centre):
-        assert isinstance(centre, Point), "Le centre doit etre un point."
-        self.__centre = centre
     
     """
     Getter de l'attribut centre
@@ -54,14 +38,6 @@ class Cercle:
     """
     def getCentre(self):
         return self.__centre
-
-    """
-    Setter de l'attribut rayon
-    @param rayon : nouveau rayon
-    """
-    def setRayon(self, rayon):
-        assert isinstance(rayon, (int, float)), "Le rayon doit etre un nombre."
-        self.__rayon = rayon
     
     """
     Getter de l'attribut rayon
@@ -112,7 +88,7 @@ class Cercle:
 
 
     # Définitions des propriétés
-    nom = property(setNom, getNom)
-    centre = property(setCentre, getCentre)
-    rayon = property(setRayon, getRayon)
+    nom = property(getNom)
+    centre = property(getCentre)
+    rayon = property(getRayon)
 
