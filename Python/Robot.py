@@ -42,14 +42,6 @@ class Robot:
         self.__ordonnee = ordonneeRobot
         self.__direction = direction
 
-    """
-    Setter de l'attribut nom
-    @param nom : nouvelle nom
-    """
-    def setNom(self, nom):
-        assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
-        assert nom != "", "Le nom ne doit pas etre vide."
-        self.__nom = nom
 
     """
     Getter de l'attribut nom
@@ -116,7 +108,6 @@ class Robot:
             self.__ordonnee += 1
         else:
             self.__ordonnee -= 1
-        
 
     """
     Méthode permettant au robot de tourner à droite
