@@ -25,19 +25,19 @@ class Robot:
     """
     Constructeur de la classe
     @param nom : nom du robot
-    @param abscisse : position x du robot
-    @param ordonnee : position y du robot
+    @param abscisseRobot : position x du robot
+    @param ordonneeRobot : position y du robot
     @param direction : direction du robot, par défaut Est
     """
-    def __init__(self, nom, abscisse=0, ordonnee=0, direction="Est"):
+    def __init__(self, nom, abscisseRobot=0, ordonneeRobot=0, direction="Est"):
         assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
-        assert isinstance(abscisse, int), "L'abscisse doit etre un entier."
-        assert isinstance(ordonnee, int), "L'ordonnee doit etre un entier."
+        assert isinstance(abscisseRobot, int), "L'abscisse doit etre un entier."
+        assert isinstance(ordonneeRobot, int), "L'ordonnee doit etre un entier."
         assert isinstance(direction, str), "La direction doit etre une chaine de caracteres."
 
         self.__nom  = nom
-        self.__abscisse = abscisse 
-        self.__ordonnee = ordonnee
+        self.__abscisse = abscisseRobot 
+        self.__ordonnee = ordonneeRobot
         self.__direction = direction
 
     """
@@ -57,11 +57,11 @@ class Robot:
 
     """
     Setter de l'attribut abscisse
-    @param abscisse : nouvelle abscisse
+    @param abscisseRobot : nouvelle abscisse
     """
-    def setAbscisse(self, abscisse):
-        assert isinstance(abscisse, int), "L'abscisse doit etre un entier."
-        self.__abscisse = abscisse
+    def setAbscisse(self, abscisseRobot):
+        assert isinstance(abscisseRobot, int), "L'abscisse doit etre un entier."
+        self.__abscisse = abscisseRobot
 
     """
     Getter de l'attribut abscisse
@@ -72,11 +72,11 @@ class Robot:
 
     """
     Setter de l'attribut ordonnee
-    @param ordonnee : nouvelle ordonnee
+    @param ordonneeRobot : nouvelle ordonnee
     """
-    def setOrdonnee(self, ordonnee):
-        assert isinstance(ordonnee, int), "L'ordonnee doit etre un entier."
-        self.__ordonnee = ordonnee
+    def setOrdonnee(self, ordonneeRobot):
+        assert isinstance(ordonneeRobot, int), "L'ordonnee doit etre un entier."
+        self.__ordonnee = ordonneeRobot
 
     """
     Getter de l'attribut ordonnee
