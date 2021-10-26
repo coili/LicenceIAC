@@ -16,9 +16,59 @@ class Cercle:
     @param r : rayon du cercle
     """
     def __init__(self, nom, centre, r):
+        assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
+        assert isinstance(centre, (int, float)), "Le centre doit etre un nombre."
+        assert isinstance(r, (int, float)), "Le rayon doit etre un nombre."
+
         self.__nom = nom
         self.__centre = centre
         self.__rayon = r
+
+
+    """
+    Setter de l'attribut nom
+    @param nom : nouveau nom
+    """
+    def setNom(self, nom):
+        assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
+        self.__nom = nom    
+
+    """
+    Getter de l'attribut nom
+    @return nom : nom
+    """
+    def getNom(self):
+        return self.__nom
+
+    """
+    Setter de l'attribut centre
+    @param centre : nouveau centre
+    """
+    def setCentre(self, centre):
+        assert isinstance(centre, (int, float)), "Le centre doit etre un nombre."
+        self.__centre = centre
+    
+    """
+    Getter de l'attribut centre
+    @return centre : centre du cercle
+    """
+    def getCentre(self):
+        return self.__centre
+
+    """
+    Setter de l'attribut rayon
+    @param rayon : nouveau rayon
+    """
+    def setRayon(self, rayon):
+        assert isinstance(rayon, (int, float)), "Le rayon doit etre un nombre."
+        self.__rayon = rayon
+    
+    """
+    Getter de l'attribut rayon
+    @return rayon : rayon du cercle
+    """
+    def getRayon(self):
+        return self.__rayon
 
     """
     Méthode permettant d'obtenir le périmètre du cercle
@@ -60,6 +110,11 @@ class Cercle:
         affichage += "- Rayon : " + str(self.__rayon) + "\n"
         return affichage
 
+
+    nom = property(setNom, getNom)
+    centre = property(setCentre, getCentre)
+    rayon = property(setRayon, getRayon)
+    
 
 """
 =================

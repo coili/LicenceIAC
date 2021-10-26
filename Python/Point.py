@@ -15,23 +15,60 @@ class Point:
     @param ordonnee : coordonnée Y du point (par défaut, 0)
     """
     def __init__(self, nom, abscisse=0, ordonnee=0):
+        assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
+        assert isinstance(abscisse, int), "L'abscisse doit etre un entier."
+        assert isinstance(ordonnee, int), "L'ordonnee doit etre un entier."
+
         self.__nom = nom
         self.__abscisse = abscisse
         self.__ordonnee = ordonnee
+
+
+    """
+    Setter de l'attribut nom
+    @param nom : nouveau nom
+    """
+    def setNom(self, nom):
+        assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
+        self.__nom = nom    
+
+    """
+    Getter de l'attribut nom
+    @return nom : nom
+    """
+    def getNom(self):
+        return self.__nom
+
+    """
+    Setter de l'attribut abscisse
+    @param abscisse : nouvelle abscisse
+    """
+    def setAbscisse(self, abscisse):
+        assert isinstance(abscisse, int), "L'abscisse doit etre un entier."
+        self.__abscisse = abscisse
     
     """
-    Getter de l'attribut x
-    @return x : coordonnée X du point
+    Getter de l'attribut abscisse
+    @return abscisse : coordonnée X du point
     """
-    def getX(self):
+    def getAbscisse(self):
         return self.__abscisse
 
     """
-    Getter de l'attribut y
-    @return y : coordonnée Y du point
+    Setter de l'attribut ordonnee
+    @param ordonnee : nouvelle ordonnee
     """
-    def getY(self):
+    def setOrdonnee(self, ordonnee):
+        assert isinstance(ordonnee, int), "L'ordonnee doit etre un entier."
+        self.__ordonnee = ordonnee
+
+    """
+    Getter de l'attribut ordonnee
+    @return ordonnee : coordonnée Y du point
+    """
+    def getOrdonnee(self):
         return self.__ordonnee
+
 
     """
     Méthode permettant de calculer la distance, entre deux points
@@ -56,7 +93,11 @@ class Point:
         affichage += "- Ordonnée : " + str(self.__ordonnee) + "\n"
         return affichage
         
-
+    
+    nom = property(setNom, getNom)
+    abscisse = property(setAbscisse, getAbscisse)
+    ordonnee = property(setOrdonnee, getOrdonnee)
+    
 
 """
 =================

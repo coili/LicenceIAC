@@ -30,10 +30,60 @@ class Robot:
     @param direction : direction du robot, par défaut Est
     """
     def __init__(self, nom, abscisse=0, ordonnee=0, direction="Est"):
+        assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
+        assert isinstance(abscisse, int), "L'abscisse doit etre un entier."
+        assert isinstance(ordonnee, int), "L'ordonnee doit etre un entier."
+        assert isinstance(direction, str), "La direction doit etre une chaine de caracteres."
+
         self.__nom  = nom
         self.__abscisse = abscisse 
         self.__ordonnee = ordonnee
         self.__direction = direction
+
+    """
+    Setter de l'attribut nom
+    @param nom : nouvelle nom
+    """
+    def setNom(self, nom):
+        assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
+        self.__nom = nom
+
+    """
+    Getter de l'attribut nom
+    @return nom : nom
+    """
+    def getNom(self):
+        return self.__nom
+
+    """
+    Setter de l'attribut abscisse
+    @param abscisse : nouvelle abscisse
+    """
+    def setAbscisse(self, abscisse):
+        assert isinstance(abscisse, int), "L'abscisse doit etre un entier."
+        self.__abscisse = abscisse
+
+    """
+    Getter de l'attribut abscisse
+    @return abscisse : abscisse
+    """
+    def getAbscisse(self):
+        return self.__abscisse
+
+    """
+    Setter de l'attribut ordonnee
+    @param ordonnee : nouvelle ordonnee
+    """
+    def setOrdonnee(self, ordonnee):
+        assert isinstance(ordonnee, int), "L'ordonnee doit etre un entier."
+        self.__ordonnee = ordonnee
+
+    """
+    Getter de l'attribut ordonnee
+    @return ordonnee : ordonnee
+    """
+    def getOrdonnee(self):
+        return self.__ordonnee
 
     """
     Setter de l'attribut direction
@@ -42,6 +92,13 @@ class Robot:
     def setDirection(self, direction):
         assert isinstance(direction, str), "La distance doit etre une chaine de caracteres."
         self.__direction = direction
+
+    """
+    Getter de l'attribut direction
+    @return direction : direction
+    """
+    def getDirection(self):
+        return self.__direction
 
     """
     Méthode permettant au robot d'avancer
@@ -79,6 +136,12 @@ class Robot:
         affichage += "- Orientation : " + self.__direction + "\n"
         return affichage
 
+
+    nom = property(getNom, setNom)
+    abscisse = property(getAbscisse, setAbscisse)
+    ordonnee = property(getOrdonnee, setOrdonnee)
+    direction = property(getDirection, setDirection)
+    
 
 """
 =================
