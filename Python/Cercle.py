@@ -1,7 +1,7 @@
 # coding: utf-8
 
 import math
-from Exo3 import Point
+from Point import Point
 
 """
 Classe Cercle
