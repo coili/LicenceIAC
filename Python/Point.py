@@ -11,27 +11,27 @@ class Point:
     """
     Constructeur de la classe
     @param nom : nom du point
-    @param x : coordonnée X du point (par défaut, 0)
-    @param y : coordonnée Y du point (par défaut, 0)
+    @param abscisse : coordonnée X du point (par défaut, 0)
+    @param ordonnee : coordonnée Y du point (par défaut, 0)
     """
-    def __init__(self, nom, x=0, y=0):
+    def __init__(self, nom, abscisse=0, ordonnee=0):
         self.__nom = nom
-        self.__x = x
-        self.__y = y
+        self.__abscisse = abscisse
+        self.__ordonnee = ordonnee
     
     """
     Getter de l'attribut x
     @return x : coordonnée X du point
     """
     def getX(self):
-        return self.__x
+        return self.__abscisse
 
     """
     Getter de l'attribut y
     @return y : coordonnée Y du point
     """
     def getY(self):
-        return self.__y
+        return self.__ordonnee
 
     """
     Méthode permettant de calculer la distance, entre deux points
@@ -42,7 +42,7 @@ class Point:
         point_x = Point.getX()
         point_y = Point.getY()
 
-        distance = math.sqrt(pow((point_x - self.__x), 2) + pow((point_y - self.__y), 2))
+        distance = math.sqrt(pow((point_x - self.__abscisse), 2) + pow((point_y - self.__ordonnee), 2))
 
         return round(distance, 3)
 
@@ -52,8 +52,8 @@ class Point:
     """
     def __repr__(self):
         affichage = "Informations concernant le point " + self.__nom + "\n"
-        affichage += "- Abscisse : " + str(self.__x) + "\n"
-        affichage += "- Ordonnée : " + str(self.__y) + "\n"
+        affichage += "- Abscisse : " + str(self.__abscisse) + "\n"
+        affichage += "- Ordonnée : " + str(self.__ordonnee) + "\n"
         return affichage
         
 

@@ -1,6 +1,6 @@
 class Rectangle:
 
-    def __init__(self, longueurRectangle, largeurRectangle):
+    def __init__(self, longueurRectangle=0, largeurRectangle=0):
         self.__longueur = longueurRectangle
         self.__largeur = largeurRectangle
 
@@ -30,3 +30,6 @@ TEST
 """    
 rectangle_1 = Rectangle(20, 30)
 rectangle_2 = Rectangle(20, 20)
+rectangle_3 = Rectangle()
+
+print(rectangle_3.longueur)

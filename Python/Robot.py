@@ -25,14 +25,14 @@ class Robot:
     """
     Constructeur de la classe
     @param nom : nom du robot
-    @param x : position x du robot
-    @param y : position y du robot
+    @param abscisse : position x du robot
+    @param ordonnee : position y du robot
     @param direction : direction du robot, par défaut Est
     """
-    def __init__(self, nom, x=0, y=0, direction="Est"):
+    def __init__(self, nom, abscisse=0, ordonnee=0, direction="Est"):
         self.__nom  = nom
-        self.__x = x 
-        self.__y = y
+        self.__abscisse = abscisse 
+        self.__ordonnee = ordonnee
         self.__direction = direction
 
     """
@@ -47,13 +47,13 @@ class Robot:
     """
     def avance(self):
         if self.__direction == "Est":
-            self.__x += 1
+            self.__abscisse += 1
         elif self.__direction == "Ouest":
-            self.__x -= 1
+            self.__abscisse -= 1
         elif self.__direction == "Nord":
-            self.__y += 1
+            self.__ordonnee += 1
         else:
-            self.__y -= 1
+            self.__ordonnee -= 1
 
     """
     Méthode permettant au robot de tourner à droite
@@ -73,8 +73,8 @@ class Robot:
     """
     def __repr__(self):
         affichage = "Etat du robot " + self.__nom + " : \n" 
-        affichage += "- Abscisse : " + str(self.__x) + "\n"
-        affichage += "- Ordonnée : " + str(self.__y) + "\n"
+        affichage += "- Abscisse : " + str(self.__abscisse) + "\n"
+        affichage += "- Ordonnée : " + str(self.__ordonnee) + "\n"
         affichage += "- Orientation : " + self.__direction + "\n"
         return affichage
 
