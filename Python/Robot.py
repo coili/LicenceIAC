@@ -34,6 +34,7 @@ class Robot:
         assert isinstance(abscisseRobot, int), "L'abscisse doit etre un entier."
         assert isinstance(ordonneeRobot, int), "L'ordonnee doit etre un entier."
         assert isinstance(direction, str), "La direction doit etre une chaine de caracteres."
+        assert nom != "", "Le nom ne doit pas etre vide."
         assert direction in ['Est', 'Ouest', 'Nord', 'Sud'], "Ce n'est pas une direction."
 
         self.__nom  = nom
@@ -47,6 +48,7 @@ class Robot:
     """
     def setNom(self, nom):
         assert isinstance(nom, str), "Le nom doit etre une chaine de caracteres."
+        assert nom != "", "Le nom ne doit pas etre vide."
         self.__nom = nom
 
     """
