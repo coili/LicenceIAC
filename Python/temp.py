@@ -15,14 +15,14 @@ class Rectangle:
         return self.__largeur
 
     def setLongueur(self, longueurRectangle):
+        assert isinstance(longueurRectangle, (int, float)), "La longueur doit etre un nombre."
+        assert longueurRectangle >= 0, "La longueur doit etre positive."
         self.__longueur = longueurRectangle
     
     def setLargeur(self, largeurRectangle):
+        assert isinstance(largeurRectangle, (int, float)), "La largeur doit etre un nombre."
+        assert largeurRectangle >= 0, "La largeur doit etre positive."
         self.__largeur = largeurRectangle
-
-    
-    longueur = property(getLongueur, setLongueur)
-    largeur = property(getLargeur, setLargeur)
     
 
 """"
@@ -30,6 +30,8 @@ TEST
 """    
 rectangle_1 = Rectangle(20, 30)
 rectangle_2 = Rectangle(20, 20)
-rectangle_3 = Rectangle()
+rectangle_3 = Rectangle(20, 15)
 
-print(rectangle_3.longueur)
+rectangle_3.setLongueur(25)
+
+print(rectangle_3.getLongueur())

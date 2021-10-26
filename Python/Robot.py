@@ -40,6 +40,7 @@ class Robot:
     @param direction : nouvelle direction
     """
     def setDirection(self, direction):
+        assert isinstance(direction, str), "La distance doit etre une chaine de caracteres."
         self.__direction = direction
 
     """
