@@ -1,3 +1,6 @@
+/* Colin Senot */
+
+
 /* Faits */
 directementDans(olga, katarina).
 directementDans(natasha, olga).

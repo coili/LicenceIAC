@@ -1,3 +1,6 @@
+/* Colin Senot */
+
+
 /* Faits */
 trainDirect(sarrebruck, dudweiler).
 trainDirect(forbach, sarrebruck).
