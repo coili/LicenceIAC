@@ -12,3 +12,6 @@ class Voiture(Vehicule):
     def afficher(self):
         Vehicule.afficher(self)
         print("Nombre de portes : ", self.__nbPortes)
+        
+    def allumerAutoRadio(self):
+        print("L'auto radio est allumé")
