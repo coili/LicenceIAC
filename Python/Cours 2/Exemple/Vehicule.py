@@ -6,21 +6,21 @@ class Vehicule:
         self.__marque = marque
         self.__vitesse = vitesse
         
-    def afficher(self):
-        print("Marque : ", self.getMarque())
-        print("Vitesse : ", self.getVitesse())
-        
-    def getMarque(self):
+    def Afficher(self):
+        print("Marque : ", self.GetMarque())
+        print("Vitesse : ", self.GetVitesse())
+    
+    def GetMarque(self):
         return self.__marque
     
-    def getVitesse(self):
+    def GetVitesse(self):
         return self.__vitesse
     
-    def rouler(self):
+    def Rouler(self):
         print("Le véhicule avance.")
         
-    def freiner(self):
+    def Freiner(self):
         print("Le véhicule freine.")
         
-    def polluer(self):
+    def Polluer(self):
         print("Le véhicule pollue.")

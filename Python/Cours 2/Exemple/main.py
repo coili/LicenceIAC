@@ -5,23 +5,26 @@ from Velo import Velo
 
 vehicule = Vehicule("Audi", 90)
 
-vehicule.rouler()
-vehicule.freiner()
-vehicule.polluer()
+vehicule.Rouler()
+vehicule.Freiner()
+vehicule.Polluer()
 
-vehicule.afficher()
+vehicule.Afficher()
 
 print("\n")
 
 moto = Moto("BMW", 100)
-moto.rouler()
+moto.Rouler()
 
 print("\n")
 
 velo = Velo("Btwin", 20, 6)
-velo.afficher()
+velo.Afficher()
+velo.Polluer()
 
 print("\n")
 
 voiture = Voiture("Volkswagen", 200, 5)
-voiture.afficher()
+voiture.Afficher()
+voiture.AllumerAutoRadio()
+voiture.RoueArriere()

@@ -1,3 +1,5 @@
+# coding: utf-8
+
 from Vehicule import Vehicule
 
 class Velo(Vehicule):
@@ -6,15 +8,15 @@ class Velo(Vehicule):
         Vehicule.__init__(self, marque, vitesse)
         self.__nbPlateaux = nbPlateaux
         
-    def getPlateaux(self):
+    def GetPlateaux(self):
         return self.__nbPlateaux
     
-    def afficher(self):
-        Vehicule.afficher(self)
-        print("Nombre de plateaux : ", self.getPlateaux())
+    def Afficher(self):
+        Vehicule.Afficher(self)
+        print("Nombre de plateaux : ", self.GetPlateaux())
         
-    def roueArriere(self):
+    def RoueArriere(self):
         print("Roue arrière")
         
-    def polluer(self):
+    def Polluer(self):
         print("Je pollue mais qu'un petit peu, ici on respecte l'environnement.")

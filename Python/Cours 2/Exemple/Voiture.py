@@ -1,3 +1,5 @@
+# coding: utf-8
+
 from Vehicule import Vehicule
 
 class Voiture(Vehicule):
@@ -6,12 +8,12 @@ class Voiture(Vehicule):
         Vehicule.__init__(self, marque, vitesse)
         self.__nbPortes = nbPortes
         
-    def getPortes(self):
+    def GetPortes(self):
         return self.__nbPortes
     
-    def afficher(self):
-        Vehicule.afficher(self)
+    def Afficher(self):
+        Vehicule.Afficher(self)
         print("Nombre de portes : ", self.__nbPortes)
         
-    def allumerAutoRadio(self):
+    def AllumerAutoRadio(self):
         print("L'auto radio est allumé")
