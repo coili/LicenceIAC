@@ -12,3 +12,9 @@ class Velo(Vehicule):
     def afficher(self):
         Vehicule.afficher(self)
         print("Nombre de plateaux : ", self.getPlateaux())
+        
+    def roueArriere(self):
+        print("Roue arrière")
+        
+    def polluer(self):
+        print("Je pollue mais qu'un petit peu, ici on respecte l'environnement.")
