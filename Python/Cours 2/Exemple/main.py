@@ -1,3 +1,5 @@
+# coding: utf-8
+
 from Vehicule import Vehicule
 from Moto import Moto
 from Voiture import Voiture
@@ -27,4 +29,8 @@ print("\n")
 voiture = Voiture("Volkswagen", 200, 5)
 voiture.Afficher()
 voiture.AllumerAutoRadio()
-voiture.RoueArriere()
+
+try:
+    voiture.RoueArriere()
+except:
+    print("Erreur: La voiture ne peut pas faire de roue arrière.")
