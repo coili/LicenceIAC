@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 f 0 = 1
 f 1 = 2
 f 2 = 4
@@ -16,6 +17,8 @@ prenom "Curie" = "Marie"
 prenom "Turing" = "Alan"
 prenom "Tesla" = "Nikola"
 prenom "Einstein" = "Albert"
+
+-- Ne fonctionne pas si l'on ajoute pas cette déclaration
 prenom "Kepler" = "Johannes"
 
 n = f 4
