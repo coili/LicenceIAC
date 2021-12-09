@@ -16,7 +16,7 @@ class Velo(Vehicule):
         print("Nombre de plateaux : ", self.GetPlateaux())
         
     def RoueArriere(self):
-        print("Roue arrière")
+        print("Je cabre.")
         
     def Polluer(self):
         print("Je pollue mais qu'un petit peu, ici on respecte l'environnement.")
