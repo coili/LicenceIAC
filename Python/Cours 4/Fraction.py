@@ -67,7 +67,7 @@ class Fraction:
     
 fraction1 = Fraction(1, 2)
 fraction2 = Fraction(1, 3)
-fraction3 = Fraction(22, 10)
+fraction3 = Fraction(6, 8)
 
 print(fraction1.add(fraction2))
 print(fraction3.simplify())
