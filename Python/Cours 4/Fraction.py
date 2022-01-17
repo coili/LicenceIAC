@@ -71,3 +71,5 @@ fraction3 = Fraction(6, 8)
 
 print(fraction1.add(fraction2))
 print(fraction3.simplify())
+
+# merci copilot pour les travaux
