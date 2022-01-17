@@ -15,35 +15,35 @@ class Fraction:
     def add(self, fraction):
         numerator = self.numerator * fraction.denominator + self.denominator * fraction.numerator
         denominator = self.denominator * fraction.denominator
-        return Fraction(numerator, denominator)
+        return Fraction(numerator, denominator).simplify()
 
     def substract(self, fraction):
         numerator = self.numerator * fraction.denominator - self.denominator * fraction.numerator
         denominator = self.denominator * fraction.denominator
-        return Fraction(numerator, denominator)
+        return Fraction(numerator, denominator).simplify()
     
     def multiply(self, fraction):
         numerator = self.numerator * fraction.numerator
         denominator = self.denominator * fraction.denominator
-        return Fraction(numerator, denominator)
+        return Fraction(numerator, denominator).simplify()
     
     def divide(self, fraction):
         numerator = self.numerator * fraction.denominator
         denominator = self.denominator * fraction.numerator
-        return Fraction(numerator, denominator)
+        return Fraction(numerator, denominator).simplify()
     
     
     '''
     Euclide pour simplifier les fractions
     '''
-    def gcd(self, a, b):
+    def pgcd(self, a, b):
         if b == 0:
             return a
-        return self.gcd(b, a % b)
+        return self.pgcd(b, a % b)
     
     def simplify(self):
-        gcd = self.gcd(self.numerator, self.denominator)
-        return Fraction(self.numerator // gcd, self.denominator // gcd)
+        pgcd = self.pgcd(self.numerator, self.denominator)
+        return Fraction(self.numerator // pgcd, self.denominator // pgcd)
     
     
     '''
@@ -61,8 +61,6 @@ class Fraction:
     def SetDenominator(self, denominator):
         self.denominator = denominator
 
-
-
     
     
 fraction1 = Fraction(1, 2)
@@ -71,5 +69,5 @@ fraction3 = Fraction(6, 8)
 
 print(fraction1.add(fraction2))
 print(fraction3.simplify())
+print(fraction3.pgcd(6, 8))
 
-# merci copilot pour les travaux

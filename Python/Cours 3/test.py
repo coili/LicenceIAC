@@ -1,35 +1,14 @@
 '''
-Create child class Animal of class ABC
-Add abstract methode 'cri' with pass
-'''                                                                      
-from abc import ABC, abstractmethod
+Createa background process that runs a function every second.
+'''
+import time
+import threading
 
-class Animal(ABC):
-    def __init__(self, name):
-        self.name = name
-        
-    @abstractmethod
-    def cri(self):
-        pass
+def my_function():
+    print("Hello world")
+
+def main():
+    threading.Timer(1.0, my_function).start()
     
-
-'''
-Create child class Lion of class Animal
-'''
-class Lion(Animal):
-    def cri(self):
-        print("{} : Grrrr".format(self.name))
-        
-'''
-Create child class owl of class Animal
-'''
-class Owl(Animal):
-    def cri(self):
-        print("{} : Je hulule".format(self.name))
-        
-        
-alice = Owl("Alice")
-samba = Lion("Samba")
-
-alice.cri()
-samba.cri()
+if __name__ == "__main__":
+    main()
